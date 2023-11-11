@@ -382,11 +382,25 @@ int main() {
                         cout << "Enter publisher: ";
                         cin.getline(book.publisher, 50);
                         cout << "Enter year: ";
-                        cin >> book.year;
+                        while (!(cin >> book.year)) {
+                            cout << "Invalid input. Please enter a number for the year: ";
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        }
+
                         cout << "Enter quantity: ";
-                        cin >> book.quantity;
+                        while (!(cin >> book.quantity)) {
+                            cout << "Invalid input. Please enter a number for the quantity: ";
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        }
+
                         cout << "Enter price: ";
-                        cin >> book.price;
+                        while (!(cin >> book.price)) {
+                            cout << "Invalid input. Please enter a number for the price: ";
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        }
                         insert(book);
                         break;
                     }
@@ -436,11 +450,25 @@ int main() {
                         cout << "Enter publisher: ";
                         cin.getline(book.publisher, 50);
                         cout << "Enter year: ";
-                        cin >> book.year;
+                        while (!(cin >> book.year)) {
+                            cout << "Invalid input. Please enter a number for the year: ";
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        }
+
                         cout << "Enter quantity: ";
-                        cin >> book.quantity;
+                        while (!(cin >> book.quantity)) {
+                            cout << "Invalid input. Please enter a number for the quantity: ";
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        }
+
                         cout << "Enter price: ";
-                        cin >> book.price;
+                        while (!(cin >> book.price)) {
+                            cout << "Invalid input. Please enter a number for the price: ";
+                            cin.clear();
+                            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                        }
                         update(book);
                         cout << "Book updated." << endl << endl;
                         break;
